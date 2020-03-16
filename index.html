@@ -10,14 +10,35 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css"
           integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+    <style>
+        .margin-left {
+            margin-left: 20px;
+        }
+        .margin-top {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid margin-left">
         <div class="row" id="title-area">
-            <h3>RxJava + SSE를 이용한 온/습도 데이터 측정</h3>
+            <div class="col-lg-12">
+                <h3>RxJava + SSE를 이용한 온/습도 데이터 측정</h3>
+            </div>
         </div>
-        <div class="row" id="button-area"></div>
-        <div class="row" id="data-area"></div>
+        <div class="row margin-top" id="button-area">
+            <div class="col-lg-1">
+                <button type="button" class="btn btn-success">온/습도 데이터 측정</button>
+            </div>
+            <div class="col-lg-1">
+                <button type="button" class="btn btn-danger">온/습도 데이터 측정 중지</button>
+            </div>
+        </div>
+        <div class="row margin-top" id="data-area">
+            <div class="col-lg-12">
+                <span>측정된 데이터가 없습니다.</span>
+            </div>
+        </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
