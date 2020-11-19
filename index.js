@@ -14,11 +14,9 @@ $(document).ready(function(){
             }
 
             eventSource.onmessage = e => {
-                var result = JSON.parse(e.data);
-
-                var temperature = result.temperature.value;
-                var humidity = result.humidity.value;
-                $("#data-area").append("<div>온도: " + temperature + ", 습도: " + humidity + "</div>");
+                let result = JSON.parse(e.data);
+                console.log(result);
+                $("#data-area").append("<div>습도: " + result.humidity + ", 온도: " + result.temperature + "</div>");
             }
 
             eventSource.onerror = error => {
